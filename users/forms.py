@@ -13,7 +13,7 @@ class RegisterForm(forms.ModelForm):
 
     def clean_confirm_password(self):
         cd=self.cleaned_data
-        if cd['password'] != cd['confirm_password']:
+        if cd['password'] != cd['confirm_password']: 
             raise forms.ValidationError('비밀번호가 일치하지 않습니다!')
 
         return cd['confirm_password']
